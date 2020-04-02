@@ -1,13 +1,11 @@
 package peter.echec.model.pieces;
 
-import javafx.scene.image.Image;
 import peter.echec.model.Case;
 
 public class Cavalier extends Piece {
 
-	public Cavalier(String nom, int color, Image image) {
-		super(nom, color, image);
-		// TODO Auto-generated constructor stub
+	public Cavalier(String nom, int color, String imagePath) {
+		super(nom, color, imagePath);
 	}
 
 	@Override

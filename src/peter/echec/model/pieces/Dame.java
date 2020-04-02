@@ -1,14 +1,13 @@
 package peter.echec.model.pieces;
 
-import javafx.scene.image.Image;
 import peter.echec.model.Case;
 
 public class Dame extends Piece {
 
-	public Dame(String nom, int color, Image image) {
-		super(nom, color, image);
+	public Dame(String nom, int color, String imagePath) {
+		super(nom, color, imagePath);
 	}
-
+	
 	@Override
 	public int[][] deplacement(Case[][] plateau, int ligne, int colonne) {
 		int[][] result = new int[8][8];

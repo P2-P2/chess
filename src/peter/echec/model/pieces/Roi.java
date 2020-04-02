@@ -1,12 +1,11 @@
 package peter.echec.model.pieces;
 
-import javafx.scene.image.Image;
 import peter.echec.model.Case;
 
 public class Roi extends Piece {
 
-	public Roi(String nom, int color, Image image) {
-		super(nom, color, image);
+	public Roi(String nom, int color, String imagePath) {
+		super(nom, color, imagePath);
 	}
 
 	@Override

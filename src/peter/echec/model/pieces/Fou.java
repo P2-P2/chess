@@ -1,15 +1,13 @@
 package peter.echec.model.pieces;
 
-import javafx.scene.image.Image;
 import peter.echec.model.Case;
 
 public class Fou extends Piece{
 
-	public Fou(String nom, int color, Image image) {
-		super(nom, color, image);
-		// TODO Auto-generated constructor stub
+	public Fou(String nom, int color, String imagePath) {
+		super(nom, color, imagePath);
 	}
-
+	
 	@Override
 	public int[][] deplacement(Case[][] plateau, int ligne, int colonne) {
 		int[][] result = new int[8][8];
