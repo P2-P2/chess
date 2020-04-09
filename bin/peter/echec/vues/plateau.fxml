@@ -8,107 +8,112 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="peter.echec.controller.EchecController">
 	<children>
-      <AnchorPane prefHeight="600.0" prefWidth="600.0">
-         <children>
-      		<GridPane fx:id="gridpane" gridLinesVisible="true" maxHeight="600.0" maxWidth="600.0" prefHeight="600.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-      			<columnConstraints>
-      				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-      				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-      				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-      				<ColumnConstraints hgrow="SOMETIMES" minWidth="75.0" prefWidth="75.0" />
-      				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-      				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-      				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-      				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-      			</columnConstraints>
-      			<rowConstraints>
-      				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-      				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-      				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-      				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-      				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-      				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-      				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-      				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-      			</rowConstraints>
-      			<children>
-      				<Pane fx:id="case_0_0" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" />
-      				<Pane fx:id="case_0_1" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="1" />
-      				<Pane fx:id="case_0_2" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" />
-      				<Pane fx:id="case_0_3" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="3" />
-      				<Pane fx:id="case_0_4" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" />
-      				<Pane fx:id="case_0_5" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="5" />
-      				<Pane fx:id="case_0_6" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" />
-      				<Pane fx:id="case_0_7" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="7" />
-      				<Pane fx:id="case_1_0" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.rowIndex="1" />
-      				<Pane fx:id="case_1_1" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      				<Pane fx:id="case_1_2" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-      				<Pane fx:id="case_1_3" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-      				<Pane fx:id="case_1_4" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-      				<Pane fx:id="case_1_5" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-      				<Pane fx:id="case_1_6" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-      				<Pane fx:id="case_1_7" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="1" />
-      				<Pane fx:id="case_2_0" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2" />
-      				<Pane fx:id="case_2_1" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-      				<Pane fx:id="case_2_2" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-      				<Pane fx:id="case_2_3" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-      				<Pane fx:id="case_2_4" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-      				<Pane fx:id="case_2_5" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-      				<Pane fx:id="case_2_6" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
-      				<Pane fx:id="case_2_7" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="7" GridPane.rowIndex="2" />
-      				<Pane fx:id="case_3_0" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.rowIndex="3" />
-      				<Pane fx:id="case_3_1" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-      				<Pane fx:id="case_3_2" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-      				<Pane fx:id="case_3_3" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-      				<Pane fx:id="case_3_4" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-      				<Pane fx:id="case_3_5" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-      				<Pane fx:id="case_3_6" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="6" GridPane.rowIndex="3" />
-      				<Pane fx:id="case_3_7" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="3" />
-      				<Pane fx:id="case_4_0" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4" />
-      				<Pane fx:id="case_4_1" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-      				<Pane fx:id="case_4_2" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-      				<Pane fx:id="case_4_3" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-      				<Pane fx:id="case_4_4" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-      				<Pane fx:id="case_4_5" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="5" GridPane.rowIndex="4" />
-      				<Pane fx:id="case_4_6" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="4" />
-      				<Pane fx:id="case_4_7" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="7" GridPane.rowIndex="4" />
-      				<Pane fx:id="case_5_0" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.rowIndex="5" />
-      				<Pane fx:id="case_5_1" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-      				<Pane fx:id="case_5_2" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-      				<Pane fx:id="case_5_3" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-      				<Pane fx:id="case_5_4" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="4" GridPane.rowIndex="5" />
-      				<Pane fx:id="case_5_5" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="5" />
-      				<Pane fx:id="case_5_6" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="6" GridPane.rowIndex="5" />
-      				<Pane fx:id="case_5_7" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="5" />
-      				<Pane fx:id="case_6_0" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="6" />
-      				<Pane fx:id="case_6_1" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-      				<Pane fx:id="case_6_2" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-      				<Pane fx:id="case_6_3" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="3" GridPane.rowIndex="6" />
-      				<Pane fx:id="case_6_4" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="6" />
-      				<Pane fx:id="case_6_5" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="5" GridPane.rowIndex="6" />
-      				<Pane fx:id="case_6_6" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="6" />
-      				<Pane fx:id="case_6_7" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="7" GridPane.rowIndex="6" />
-      				<Pane fx:id="case_7_0" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.rowIndex="7" />
-      				<Pane fx:id="case_7_1" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-      				<Pane fx:id="case_7_2" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-      				<Pane fx:id="case_7_3" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="7" />
-      				<Pane fx:id="case_7_4" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="4" GridPane.rowIndex="7" />
-      				<Pane fx:id="case_7_5" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="7" />
-      				<Pane fx:id="case_7_6" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="6" GridPane.rowIndex="7" />
-      				<Pane fx:id="case_7_7" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="7" />
-      			</children>
-      		</GridPane>
-         </children>
-      </AnchorPane>
-      <Button layoutX="629.0" layoutY="562.0" mnemonicParsing="false" prefWidth="150.0" text="Quitter" />
-      <Button layoutX="629.0" layoutY="525.0" mnemonicParsing="false" prefWidth="150.0" text="Nouvelle partie" />
-      <Button layoutX="629.0" layoutY="488.0" mnemonicParsing="false" prefWidth="150.0" text="Annuler" />
-      <Label layoutX="620.0" layoutY="37.0" text="Mon Jeu d'échec">
+		<AnchorPane prefHeight="600.0" prefWidth="600.0">
+			<children>
+				<GridPane fx:id="gridpane" gridLinesVisible="true" maxHeight="600.0" maxWidth="600.0" prefHeight="600.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+					<columnConstraints>
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="75.0" prefWidth="75.0" />
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+					</columnConstraints>
+					<rowConstraints>
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+					</rowConstraints>
+					<children>
+						<Pane fx:id="case_0_0" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+						<Pane fx:id="case_0_1" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+						<Pane fx:id="case_0_2" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+						<Pane fx:id="case_0_3" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+						<Pane fx:id="case_0_4" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+						<Pane fx:id="case_0_5" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="5" GridPane.rowIndex="0" />
+						<Pane fx:id="case_0_6" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="0" />
+						<Pane fx:id="case_0_7" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="7" GridPane.rowIndex="0" />
+						<Pane fx:id="case_1_0" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+						<Pane fx:id="case_1_1" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+						<Pane fx:id="case_1_2" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+						<Pane fx:id="case_1_3" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+						<Pane fx:id="case_1_4" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+						<Pane fx:id="case_1_5" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+						<Pane fx:id="case_1_6" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+						<Pane fx:id="case_1_7" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+						<Pane fx:id="case_2_0" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+						<Pane fx:id="case_2_1" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+						<Pane fx:id="case_2_2" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+						<Pane fx:id="case_2_3" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+						<Pane fx:id="case_2_4" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+						<Pane fx:id="case_2_5" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+						<Pane fx:id="case_2_6" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+						<Pane fx:id="case_2_7" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+						<Pane fx:id="case_3_0" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+						<Pane fx:id="case_3_1" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+						<Pane fx:id="case_3_2" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+						<Pane fx:id="case_3_3" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+						<Pane fx:id="case_3_4" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+						<Pane fx:id="case_3_5" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+						<Pane fx:id="case_3_6" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+						<Pane fx:id="case_3_7" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+						<Pane fx:id="case_4_0" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+						<Pane fx:id="case_4_1" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+						<Pane fx:id="case_4_2" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+						<Pane fx:id="case_4_3" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+						<Pane fx:id="case_4_4" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+						<Pane fx:id="case_4_5" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+						<Pane fx:id="case_4_6" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+						<Pane fx:id="case_4_7" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+						<Pane fx:id="case_5_0" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+						<Pane fx:id="case_5_1" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+						<Pane fx:id="case_5_2" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+						<Pane fx:id="case_5_3" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+						<Pane fx:id="case_5_4" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+						<Pane fx:id="case_5_5" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+						<Pane fx:id="case_5_6" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+						<Pane fx:id="case_5_7" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+						<Pane fx:id="case_6_0" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+						<Pane fx:id="case_6_1" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+						<Pane fx:id="case_6_2" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+						<Pane fx:id="case_6_3" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+						<Pane fx:id="case_6_4" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+						<Pane fx:id="case_6_5" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+						<Pane fx:id="case_6_6" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+						<Pane fx:id="case_6_7" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+						<Pane fx:id="case_7_0" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+						<Pane fx:id="case_7_1" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+						<Pane fx:id="case_7_2" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+						<Pane fx:id="case_7_3" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+						<Pane fx:id="case_7_4" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+						<Pane fx:id="case_7_5" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+						<Pane fx:id="case_7_6" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DDDDDD;" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+						<Pane fx:id="case_7_7" onMouseClicked="#clickPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+					</children>
+				</GridPane>
+			</children>
+		</AnchorPane>
+		<Button layoutX="629.0" layoutY="562.0" mnemonicParsing="false" onMouseClicked="#close" prefWidth="150.0" text="Quitter" />
+		<Button layoutX="629.0" layoutY="525.0" mnemonicParsing="false" onMouseClicked="#newGame" prefWidth="150.0" text="Nouvelle partie" />
+		<Button layoutX="629.0" layoutY="488.0" mnemonicParsing="false" onMouseClicked="#undo" prefWidth="150.0" text="Annuler" />
+		<Label layoutX="620.0" layoutY="37.0" text="Mon Jeu d'échec">
+			<font>
+				<Font size="20.0" />
+			</font>
+		</Label>
+		<Label layoutX="620.0" layoutY="122.0" text="Au tour des : " />
+		<Label fx:id="labelTurn" layoutX="704.0" layoutY="122.0" prefHeight="17.0" prefWidth="80.0" text="Noirs" />
+      <Label fx:id="winnerLabel" layoutX="610.0" layoutY="222.0" prefHeight="125.0" prefWidth="171.0" text="Les blancs ont gagnés !!!" wrapText="true">
          <font>
-            <Font size="20.0" />
+            <Font size="25.0" />
          </font>
       </Label>
-      <Label layoutX="620.0" layoutY="122.0" text="Au tour des : " />
-      <Label fx:id="labelTurn" layoutX="704.0" layoutY="122.0" prefHeight="17.0" prefWidth="80.0" text="Noirs" />
 	</children>
 </AnchorPane>

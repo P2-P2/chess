@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.ResourceBundle;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -41,14 +42,18 @@ public class EchecController implements Initializable {
 	@FXML
 	private Label labelTurn;
 
+	@FXML
+	private Label winnerLabel;
+	
 	private Pane[][] panes;
 
 	private Partie partie;
 
 	private Pane firstPaneClicked;
-	private Pane secondPaneClicked;
 
 	private Map<Piece, ImageView> piecesImageView;
+
+	private boolean endOfTheGame;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -76,16 +81,20 @@ public class EchecController implements Initializable {
 		partie = new Partie();
 
 		initPiecesImageView();
-		initGame();
+		displayPieces();
 
 		firstPaneClicked = null;
-		secondPaneClicked = null;
+		endOfTheGame = false;
 
 		labelTurn.setText("Blancs");
+		winnerLabel.setText("");
 	}
 
+	/**
+	 * Initialise les objets ImageView qui vont se déplacé de pane en pane. Une
+	 * ImageView est associé à une pièce dans la map
+	 */
 	private void initPiecesImageView() {
-
 		for (Piece piece : partie.getPlateau().getPiecesNoirs()) {
 			piecesImageView.put(piece, new ImageView(piece.getImagePath()));
 		}
@@ -95,10 +104,15 @@ public class EchecController implements Initializable {
 		}
 	}
 
-	private void initGame() {
-
+	/**
+	 * Méthode permettant de mettre à jour l'ensemble de l'echiquier, même les
+	 * pièces qui n'ont pas bougés
+	 */
+	private void displayPieces() {
 		for (int i = 0; i < 8; i++) {
 			for (int j = 0; j < 8; j++) {
+				panes[i][j].getChildren().clear();
+
 				Case c = partie.getPlateau().getCase(i, j);
 				if (c.getPiece() != null) {
 					panes[i][j].getChildren().add(piecesImageView.get(c.getPiece()));
@@ -109,68 +123,98 @@ public class EchecController implements Initializable {
 
 	@FXML
 	private void clickPane(MouseEvent event) {
+		// Paneau cliqué !
+		Pane paneClicked = (Pane) event.getSource();
+		if (!endOfTheGame) {
 
-		if (firstPaneClicked == null) {
-			Pane paneClicked = (Pane) event.getSource();
+			if (firstPaneClicked == null) {
 
-			int ligne = numeroLigne(paneClicked);
-			int colonne = numeroColonne(paneClicked);
+				// On séléctionne une case
 
-			Case caseClicked = partie.getPlateau().getCase(ligne, colonne);
+				int ligne = GridPane.getRowIndex(paneClicked);
+				int colonne = GridPane.getColumnIndex(paneClicked);
 
-			if (caseClicked.getPiece() != null && caseClicked.getPiece().getColor() == partie.getTour()) {
-				// Il y a bien une pièce sur cette case et elle est de la couleur du joueur
-				firstPaneClicked = paneClicked;
-				setBackground();
-			}
+				Case caseClicked = partie.getPlateau().getCase(ligne, colonne);
 
-		} else if (firstPaneClicked == (Pane) event.getSource()) {
-
-			// La case sélectionnée est relachée
-			firstPaneClicked = null;
-			setBackground();
-
-		} else if (secondPaneClicked == null) {
-
-			int ligneCase1 = numeroLigne(firstPaneClicked);
-			int colonneCase1 = numeroColonne(firstPaneClicked);
-
-			int[][] result = partie.getPlateau().deplacementPossible(ligneCase1, colonneCase1);
-
-			Pane paneClicked = (Pane) event.getSource();
-			int ligneCase2 = numeroLigne(paneClicked);
-			int colonneCase2 = numeroColonne(paneClicked);
-
-			if (result[ligneCase2][colonneCase2] == 1) {
-				// On a cliqué sur une case dont le déplacement était possible
-
-				// On supprime l'image de ce pane
-				firstPaneClicked.getChildren().remove(0);
-				firstPaneClicked = null;
-
-				secondPaneClicked = paneClicked;
-
-				Case case1 = partie.getPlateau().getCase(ligneCase1, colonneCase1);
-				Case case2 = partie.getPlateau().getCase(ligneCase2, colonneCase2);
-
-				// On supprme l'image du pane cliqué dans le cas ou il y avait une pièce adverse
-				if (case2.getPiece() != null) {
-					secondPaneClicked.getChildren().remove(0);
+				if (caseClicked.getPiece() != null && caseClicked.getPiece().getColor() == partie.getTour()) {
+					// Il y a bien une pièce sur cette case et elle est de la couleur du joueur
+					firstPaneClicked = paneClicked;
+					setBackground();
 				}
 
-				// On ajoute la nouvelle image au pane cliqué
-				secondPaneClicked.getChildren().add(piecesImageView.get(case1.getPiece()));
-				secondPaneClicked = null;
+			} else if (firstPaneClicked == (Pane) event.getSource()) {
 
-				// On informe le modèle du déplacement
-				partie.deplacement(case1, case2);
-
-				labelTurn.setText(partie.getTour() == 0 ? "Blancs" : "Noirs");
+				// La case sélectionnée est relachée
+				firstPaneClicked = null;
 				setBackground();
+
+			} else {
+
+				// On tente un déplacement
+
+				int ligneCase1 = GridPane.getRowIndex(firstPaneClicked);
+				int colonneCase1 = GridPane.getColumnIndex(firstPaneClicked);
+
+				int[][] result = partie.getPlateau().deplacementPossible(ligneCase1, colonneCase1);
+
+				int ligneCase2 = GridPane.getRowIndex(paneClicked);
+				int colonneCase2 = GridPane.getColumnIndex(paneClicked);
+
+				if (result[ligneCase2][colonneCase2] == 1) {
+					// On a cliqué sur une case dont le déplacement était possible
+
+					firstPaneClicked = null;
+
+					Case case1 = partie.getPlateau().getCase(ligneCase1, colonneCase1);
+					Case case2 = partie.getPlateau().getCase(ligneCase2, colonneCase2);
+
+					endOfTheGame = partie.deplacement(case1, case2);
+
+					setBackground();
+					displayPieces();
+
+					if (!endOfTheGame) {
+						labelTurn.setText(partie.getTour() == 0 ? "Blancs" : "Noirs");
+					} else {
+						winnerLabel.setText(partie.getTour() == 0 ? "Les noirs ont gagnés" : "Les blancs ont gagnés");
+						labelTurn.setText("");
+					}
+
+				}
 			}
 		}
 	}
 
+	@FXML
+	private void newGame(MouseEvent event) {
+		partie.nouvellePartie();
+		displayPieces();
+		firstPaneClicked = null;
+		endOfTheGame = false;
+		labelTurn.setText("Blancs");
+		winnerLabel.setText("");
+	}
+
+	@FXML
+	private void close(MouseEvent event) {
+		Platform.exit();
+		System.exit(0);
+	}
+
+	@FXML
+	private void undo(MouseEvent event) {
+		partie.annulerDeplacement();
+
+		labelTurn.setText(partie.getTour() == 0 ? "Blancs" : "Noirs");
+		setBackground();
+		displayPieces();
+		endOfTheGame = false;
+		winnerLabel.setText("");
+	}
+
+	/**
+	 * Met à jour le background de l'echiquier avec les couleurs des cases.
+	 */
 	private void setBackground() {
 		for (int i = 0; i < panes.length; i++) {
 			for (int j = 0; j < panes.length; j++) {
@@ -184,8 +228,8 @@ public class EchecController implements Initializable {
 
 		if (firstPaneClicked != null) {
 			firstPaneClicked.setStyle("-fx-background-color: #AAAAAA;");
-			int ligne = numeroLigne(firstPaneClicked);
-			int colonne = numeroColonne(firstPaneClicked);
+			int ligne = GridPane.getRowIndex(firstPaneClicked);
+			int colonne = GridPane.getColumnIndex(firstPaneClicked);
 
 			int[][] result = partie.getPlateau().deplacementPossible(ligne, colonne);
 
@@ -199,25 +243,5 @@ public class EchecController implements Initializable {
 				}
 			}
 		}
-
 	}
-
-	private int numeroLigne(Pane pane) {
-		for (int i = 0; i < 8; i++)
-			for (int j = 0; j < 8; j++)
-				if (panes[i][j].getId().equals(pane.getId()))
-					return i;
-
-		return -1;
-	}
-
-	private int numeroColonne(Pane pane) {
-		for (int i = 0; i < 8; i++)
-			for (int j = 0; j < 8; j++)
-				if (panes[i][j].getId().equals(pane.getId()))
-					return j;
-
-		return -1;
-	}
-
 }

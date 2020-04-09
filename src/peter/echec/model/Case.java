@@ -18,5 +18,4 @@ public class Case {
 	public void setPiece(Piece piece) {
 		this.piece = piece;
 	}
-
 }

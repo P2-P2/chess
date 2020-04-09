@@ -16,12 +16,6 @@ public class Plateau {
 	public Plateau() {
 		cases = new Case[8][8];
 
-		for (int i = 0; i < cases.length; i++) {
-			for (int j = 0; j < cases.length; j++) {
-				cases[i][j] = new Case(null);
-			}
-		}
-
 		piecesNoirs = new ArrayList<>();
 		piecesBlanches = new ArrayList<>();
 
@@ -60,13 +54,16 @@ public class Plateau {
 		piecesBlanches.add(new Pion("Pion", 0, "File:images/pion_b.png"));
 		piecesBlanches.add(new Pion("Pion", 0, "File:images/pion_b.png"));
 		piecesBlanches.add(new Pion("Pion", 0, "File:images/pion_b.png"));
-
-		// Initialisation du plateau
-		initPlateau();
 	}
 
 	public void initPlateau() {
 
+		for (int i = 0; i < cases.length; i++) {
+			for (int j = 0; j < cases.length; j++) {
+				cases[i][j] = new Case(null);
+			}
+		}
+		
 		for (int i = 0; i < 8; i++)
 			cases[0][i].setPiece(piecesNoirs.get(i));
 

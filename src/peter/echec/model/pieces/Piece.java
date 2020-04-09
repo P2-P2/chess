@@ -24,5 +24,9 @@ public abstract class Piece {
 		return imagePath;
 	}
 	
+	public String getNom() {
+		return nom;
+	}
+	
 	public abstract int[][] deplacement(Case[][] plateau, int ligne, int colonne);
 }
